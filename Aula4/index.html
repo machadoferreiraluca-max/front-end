@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang ="pt-br"> 
+       <head>
+          <title>Cadastro de Fã-Clube online</title>
+          <meta charset="UTF-8" /> 
+       </head>
+
+    <body>
+
+       <header>
+          <h1>Cadastro de Fã-Clube online</h1>
+       </header>
+       <main>
+          <section>
+             <h2>Torne-se um membro oficial</h2>
+               <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
+                  <p>Preencha o formulário abaixo para se candidatar ao</p>
+
+
+                  <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    
+
+                    <div>
+                         <label for="foto_id">Foto De Perfil:</label>
+                         <input id="foto_id" name="foto" type="file" accept="image/*"/>
+                    </div>
+                    
+
+                    <div>
+                        <label for ="nome_id">Nome Completo:</label>
+                        <input id="nome_id" name="nome" type="text" placeholder="Rógerio da Silva" />
+                    </div>
+
+
+                    <div>
+                        <label for="telefone_id">Telefone:</label>
+                        <input id="telefone_id" name="telefone" type="tel"
+                               placeholder="(43) 99999-9999"
+                               pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                               title="Formato esperado: (DD) 99999-9999"
+                               required>
+                    </div>
+
+
+                    <div>
+                        <label for="email_id">E-mail:</label>
+                        <input id="email_id" name="email" type="email">
+                    </div>
+
+
+                    <div>
+                        <label for="data_nasc_id">Data de Nascimento:</label>
+                        <input id="data_nasc_id" name="data_nasc" type="date">
+                    </div>
+
+
+
+                      <fieldset>
+
+
+                        <legend>Endereço</legend>
+
+                      <div>
+                        <label for="Logradouro_id">Logradouro:</label>
+                        <input id="Logradouro_id" name="Logradouro" type="text">
+                      </div>
+
+
+                      <div>
+                        <label for="cidade_id">Cidade-UF:</label>
+                        <input id="cidade_id" name="cidade" type="text">
+                      </div>
+
+
+                      <div>
+                        <label for="numero_id">Número:</label>
+                        <input id="numero_id" name="numero" type="number">
+                      </div>
+
+
+                      </fieldset>
+                  </fieldset> 
+
+
+
+                      <fieldset>
+                        <legend>Sobre você como fã</legend>
+
+                        <div>
+                            <label for="artista_id">Artista/Banda Favorito(a):</label>
+                            <input id="artista_id" name="artista" type="text">
+                        </div>
+
+                        <div>
+                            <label for="tempo_id">Há quanto tempo é fã(anos)</label>
+                            <input id="tempo_id" name="tempo" type="number">
+                        </div>
+
+                        <div>
+                            <label for="porque_id">Por que você quer entrar no fã-clube?</label>
+                            <textarea id="porque_id" name="porque"></textarea>
+                        </div>
+                      </fieldset>
+
+
+                      <fieldset>
+                        <legend>Tipo de membro desejado</legend>
+                        <div>
+                            <input id="nivel_padrao_id" 
+                                   name="tipo_membro" 
+                                   type="radio"
+                                   value="padrao">
+                            <label for="nivel_padrao_id">Padrão</label>
+                        </div>
+
+                        <div>
+                            <input id="nivel_premium_id"
+                                      name="tipo_membro" 
+                                      type="radio"
+                                      value="premium">
+                            <label for="nivel_premium_id">Premium</label>
+                        </div>
+
+                        <div>
+                            <input id="nivel_vip_id"
+                                      name="tipo_membro" 
+                                      type="radio"
+                                      value="vip">
+                            <label for="nivel_vip_id">VIP</label>
+                        </div>
+                      </fieldset>
+
+
+                      <fieldset>
+                        <legend>Interesses dentro do fã-clube</legend>
+
+                        <div>
+                            <input id="eventos_exclusivos_id"
+                                   name="interesses" 
+                                   type="checkbox"
+                                   value="exclusivos">
+                            <label for="eventos_exclusivos_id">Eventos exclusivos</label>
+                        </div>
+
+                        <div>
+                            <input id="meet_greet_id"
+                                   name="interesses"
+                                   type="checkbox"
+                                   value="meet_greet">
+                            <label for="meet_greet_id">Meet & Greet</label>
+                        </div>
+
+                        <div>
+                            <input id="conteudo_extra_id"
+                                   name="interesses"
+                                   type="checkbox"
+                                   value="conteudo_extra">
+                            <label for="conteudo_extra_id">Conteudo extras (bastidores, prévias vazadas)</label>
+                        </div>
+
+
+                        <div>
+                            <input id="produtos_colecionaveis_id"
+                                   name="interesses"
+                                   type="checkbox"
+                                   value="produtos_colecionaveis">
+                            <label for="produtos_colecionaveis_id">Produtos e colecionáveis exclusivos</label>
+                        </div>
+
+                      </fieldset>
+
+
+                      <fieldset>
+                        <legend>Como conheceu seu Artista/Banda favorito(a):</legend>
+                        <div>
+                            <label for="opcao_id">Selecione uma opção:</label>
+                            <select id="opcao_id" name="descoberta">
+                                <option value="amigos">indicação de amigos</option>
+                                <option value="redes_sociais">redes sociais</option>
+                                <option value="show">assistindo a um show</option>
+                                <option value="streaming">plataforma de streams</option>
+                                <option value="outros">outros</option>
+                            </select>
+                        </div>
+                      </fieldset>
+                      
+                       <div>
+                        <button type="reset">Limpar dados</button>
+                        <button type="submit">Enviar dados</button>
+                       </div>
+               </form>
+          </section>
+       </main>
+       <footer>
+          <p>Todos os direitos reservados &copy;</p>
+       </footer>
+    </body>
+</html>
