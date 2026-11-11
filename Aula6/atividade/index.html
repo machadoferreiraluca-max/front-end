@@ -4,87 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="./images/block.png" type="image/x-icon">
-  <title>TateMcrae.com</title>
+  <title>Fórmula 1</title>
 </head>
 <body>
-  <header>
-    <h1>TATE MCRAE</h1>
+  <header class="cabecalho">
+    <div class="cabecalho-principal">
+      <h1 class="logo">F1</h1>
+    </div>
+    <nav class="menu">
+      <a href="#modelos">Pilotos</a>
+      <a href="#categorias">Equipes</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
   </header>
+
   <main>
-    <section>
-      <h2>MAIS OUVIDAS</h2>
-      <div class="container-block">
-        <div class="item">HOUSEWIFE</div>
-        <div class="item">SPORTS CAR</div>
-        <div class="item">JUST KEEP WATCHING</div>
+    <section class="destaque">
+      <div class="destaque-texto">
+        <h2>Corrida em alta velocidade</h2>
+        <p>Na Fórmula 1, cada décimo conta. Tecnologia, coragem e talento se unem em uma disputa que redefine o limite da velocidade.</p>
       </div>
-      <p class="dados">Dados baseados no spotify</p>
     </section>
 
-    <section>
-      <h2>Display inline</h2>
-      <div class="container-inline">
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Item 3</div>
+    <section id="modelos">
+      <h2>Grid</h2>
+      <div class="grade-modelos">
+        <article class="modelo">
+          <img class="modelo-imagem" src="./imagens/verstapen.png" alt="Competidor de Fórmula 1 com capacete">
+          <div class="cabecalho-modelo">
+            <p class="modelo-nome">01</p>
+            <span class="equipe">Red Bull</span>
+          </div>
+          <h3>Max Verstappen</h3>
+          <p>Campeão mundial conhecido pela agressividade, velocidade e domínio em circuitos técnicos.</p>
+          <div class="etiquetas"><span>Velocidade</span><span>Racing</span></div>
+        </article>
+
+        <article class="modelo">
+          <img class="modelo-imagem leclerc" src="./imagens/leclerc.png" alt="Charles Leclerc">
+          <div class="cabecalho-modelo">
+            <p class="modelo-nome">16</p>
+            <span class="equipe">Ferrari</span>
+          </div>
+          <h3>Charles Leclerc</h3>
+          <p>Um piloto de grande talento e consistência, com foco em ultrapassagens e ritmo de classificação.</p>
+          <div class="etiquetas"><span>Qualificação</span><span>Velocidade</span></div>
+        </article>
+
+        <article class="modelo">
+          <img class="modelo-imagem" src="./imagens/hamilton-ferrari-2.webp" alt="Lewis Hamilton">
+          <div class="cabecalho-modelo">
+            <p class="modelo-nome">44</p>
+            <span class="equipe">Mercedes</span>
+          </div>
+          <h3>Lewis Hamilton</h3>
+          <p>Lenda da categoria, com múltiplos títulos e enorme experiência em grandes disputas.</p>
+          <div class="etiquetas"><span>Experiência</span><span>Estrategia</span></div>
+        </article>
+
+        <article class="modelo">
+          <img class="modelo-imagem piastri" src="./imagens/piastri_certo.png" alt="Oscar Piastri">
+          <div class="cabecalho-modelo">
+            <p class="modelo-nome">81</p>
+            <span class="equipe">McLaren</span>
+          </div>
+          <h3>Oscar Piastri</h3>
+          <p>Promessa da categoria, com estilo agressivo e grande potencial em circuitos difíceis.</p>
+          <div class="etiquetas"><span>Jovem talento</span><span>Desafio</span></div>
+        </article>
+
+        <article class="modelo">
+          <img class="modelo-imagem norris" src="./imagens/norris.png" alt="Lando Norris">
+          <div class="cabecalho-modelo">
+            <p class="modelo-nome">04</p>
+            <span class="equipe">McLaren</span>
+          </div>
+          <h3>Lando Norris</h3>
+          <p>Motorista rápido e estratégico, com equilíbrio entre defesa, ataque e controle de pneu.</p>
+          <div class="etiquetas"><span>Estratégia</span><span>Condução</span></div>
+        </article>
+
+        <article class="modelo">
+          <img class="modelo-imagem" src="./imagens/carlos-sainz-williams.jpg" alt="Carlos Sainz">
+          <div class="cabecalho-modelo">
+            <p class="modelo-nome">55</p>
+            <span class="equipe">Williams</span>
+          </div>
+          <h3>Carlos Sainz</h3>
+          <p>Um dos pilotos mais completos do grid, conhecido por consistência em condições extremas.</p>
+          <div class="etiquetas"><span>Consistência</span><span>Estabilidade</span></div>
+        </article>
       </div>
-      <p>Elementos ficam em linha e respeitam o conteúdo textual</p>
     </section>
 
-    <section>
-      <h2>Display inline-block</h2>
-      <div class="container-inline-block">
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Item 3</div>
+    <section id="categorias">
+      <h2>Equipes</h2>
+      <div class="linha-categorias">
+        <div class="categoria">Red Bull</div>
+        <div class="categoria">Ferrari</div>
+        <div class="categoria">Mercedes</div>
+        <div class="categoria">McLaren</div>
       </div>
-      <p>Elementos ficam em linha, mas se comportam como blocos</p>
     </section>
-
-    <section>
-      <h2>Display flex</h2>
-      <div class="container-flex">
-        <div class="item">Item 1</div>
-        <div id="item-2" class="item">Item 2</div>
-        <div id="item-3" class="item">Item 3</div>
-        <div class="item">Item 4</div>
-        <div class="item">Item 5</div>
-        <div class="item">Item 6</div>
-      </div>  
-      <p>Elementos ficam flexivéis e se organizam em uma direção</p>
-    </section>
-    
-    <section>
-      <h2>Display grid</h2>
-      <div class="container-grid">
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Item 3</div>
-        <div class="item">Item 4</div>
-        <div class="item">Item 5</div>
-        <div class="item">Item 6</div>
-        <div class="item">Item 7</div>
-        <div class="item">Item 8</div>
-        <div class="item">Item 9</div>
-      </div>  
-      <p>Elementos ficam posicionados em linhas e colunas</p>
-    </section>
-
-    <section>
-      <h2>Display grid area</h2>
-      <div class="container-grid-area">
-        <div class="item item-cabecalho">Cabeçalho</div>
-        <div class="item item-principal">Principal</div>
-        <div class="item item-artigo">Artigo</div>
-        <div class="item item-rodape">Rodapé</div>
-      </div>
-      <p>Elementos ficam posicionados em linhas e colunas nomeadas</p>
-    </section>
-
   </main>
-  <footer>
-    <p>Projeto de compreensão de displays no CSS</p>
-  </footer>
+
 </body>
 </html>
