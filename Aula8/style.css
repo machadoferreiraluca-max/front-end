@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaria: #6558d3;
+  --primaria-escura: #4e43b3;
+  --fundo: #f3f5ff;
+  --branco: #ffffff;
+  --texto: #25253a;
+  --borda: #dfe2ef;
+  --erro: #b42318;
+  --erro-fundo: #fff0ef;
+  --sucesso: #246b43;
+  --sucesso-fundo: #eaf8ef;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.6rem;
+  color: var(--texto);
+  background:
+    radial-gradient(circle at top left, #dedaff 0, transparent 28rem),
+    linear-gradient(135deg, var(--fundo), #eaf3ff);
+  padding: 4rem 2rem;
+}
+
+header,
+main,
+footer {
+  width: min(58rem, 100%);
+  margin-inline: auto;
+}
+
+header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  color: var(--primaria-escura);
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  letter-spacing: -0.04em;
+}
+
+main {
+  padding: 3.2rem;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(101, 88, 211, 0.12);
+  border-radius: 2rem;
+  box-shadow: 0 2rem 5rem rgba(72, 67, 135, 0.14);
+}
+
+main h2 {
+  margin-bottom: 2.4rem;
+  font-size: 2.4rem;
+}
+
+label {
+  display: block;
+  margin-top: 1.6rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 4.6rem;
+  padding: 1.1rem 1.2rem;
+  color: var(--texto);
+  background: var(--branco);
+  border: 1.5px solid var(--borda);
+  border-radius: 0.9rem;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primaria);
+  box-shadow: 0 0 0 4px rgba(101, 88, 211, 0.12);
+}
+
+label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 1.8rem;
+  min-height: 1.8rem;
+  accent-color: var(--primaria);
+}
+
+button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1.4rem 2rem;
+  color: var(--branco);
+  background: var(--primaria);
+  border: none;
+  border-radius: 1rem;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 1rem 2rem rgba(101, 88, 211, 0.24);
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  background: var(--primaria-escura);
+  box-shadow: 0 1.2rem 2.4rem rgba(101, 88, 211, 0.3);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(101, 88, 211, 0.35);
+  outline-offset: 3px;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #777894;
+}
+
+footer p {
+  padding: 1.5rem;
+}
+
+.oculto {
+  display: none;
+}
+
+.erro {
+  color: var(--erro);
+  background: var(--erro-fundo);
+  border: 1px solid #ffd2cf;
+}
+
+.sucesso {
+  color: var(--sucesso);
+  background: var(--sucesso-fundo);
+  border: 1px solid #bae8cb;
+}
+
+.campo-invalido {
+  border: 2px solid var(--erro);
+  background: #fffafa;
+}
+
+p.erro,
+#concluido {
+  margin-top: 0.7rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 2rem 1.2rem;
+  }
+
+  main {
+    padding: 2.2rem 1.6rem;
+    border-radius: 1.4rem;
+  }
+}
